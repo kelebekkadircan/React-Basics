@@ -1,10 +1,15 @@
-import UseRefExample1 from "./components/UseRefExample1";
+//  import Lastrefexample from "./components/Lastrefexample";
+// import UseMemoExample from "./components/UseMemoExample";
+import UseCallbackExample from "./components/UseCallbackExample";
+
+
 
 function App() {
   return (
     <>
-      <div className="container mt-5 text-4xl">
-        <UseRefExample1 />
+
+      <div>
+        <UseCallbackExample />
       </div>
 
     </>
