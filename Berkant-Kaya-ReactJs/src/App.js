@@ -1,39 +1,48 @@
-import React, { useEffect, useRef, useState } from 'react'
-// import Birincisayfa from './components/Birincisayfa';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+//  https://restcountries.com/v3.1/all
+
 
 function App() {
 
-  const [status, setStatus] = useState("deniyoruz")
-  const firstRef = useRef();
+  // const dispatch = useDispatch()
 
-  // İçerisine değişken verilmediği zaman sayfa yüklendiği an verir diziye verirsek ona göre triggırlanır
+  // console.log(useSelector{ state => state });
+
+  // const getData = () => {
+
+  // }
+
+
+  const [country, setCountry] = useState([])
+
   useEffect(() => {
+    const getCountry = async () => {
+      const data = await axios.get('https://restcountries.com/v3.1/all')
+      setCountry(data)
+    }
 
-    setStatus("deneme2")
+    getCountry()
   }, [])
 
-  console.log("Firstref:  ", firstRef.current);
+  console.log("Country", country);
 
   return (
     <>
-      <div>
-
-        {status}
-        <div>
-          <input className='border-solid ' ref={firstRef} placeholder='ara' />
-
-        </div>
-
-      </div>
 
 
+
+
+      {
+        country?.data?.map((data, index) => (
+          <div key={index}>{data.name.common}</div>
+        ))
+      }
 
     </>
   )
 
 
 
-
 }
-
 export default App;
