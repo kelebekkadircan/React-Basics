@@ -1,0 +1,80 @@
+.auth {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.auth .auth-container {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.auth .auth-container h2 {
+
+    margin-bottom: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.auth .auth-container input {
+    margin-bottom: 0.2rem;
+    margin-top: 8px;
+    font-size: 16px;
+    border: solid 1px rgb(159, 156, 156);
+    border-radius: 5px;
+    padding: 0.45rem;
+}
+
+.auth .auth-container p {
+    margin-bottom: 1rem;
+    cursor: pointer;
+    color: rgb(179, 8, 8);
+    font-size: 0.7rem;
+}
+
+.auth .auth-container .auth-container-google {
+    margin-bottom: 0.2rem;
+    border: 1px solid grey;
+    padding: 0.55rem;
+    text-align: center;
+    border-radius: 6px;
+    margin-top: 10px;
+    background-color: #4285F4;
+    color: white;
+
+
+
+}
+
+.auth .auth-container .auth-container-google:hover {
+    color: #4285f4;
+    background-color: white;
+    transition: all 0.5s;
+}
+
+
+
+.auth .auth-container .auth-container-button {
+    margin-bottom: 0.2rem;
+    border: 1px solid grey;
+    padding: 0.55rem;
+    text-align: center;
+    border-radius: 6px;
+    margin-top: 10px;
+    background-color: #FFA000;
+    color: white;
+}
+
+.auth .auth-container .auth-container-button:hover {
+    color: #ffa000;
+    background-color: white;
+    transition: all 0.5s;
+
+}
