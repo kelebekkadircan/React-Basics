@@ -1,11 +1,17 @@
 import React from 'react'
 
 function ProductCard({ prd }) {
+
+
+
     return (
         <>
-            <div className='w-1/5 h-[350px] border rounded-lg m-2'>
-                <img className='h-16' src={prd?.image} alt="" />
-
+            <div className=' hover:border-indigo-600 w-1/5 h-[350px] border rounded-lg m-2 flex flex-col items-center p-2 space-y-2 '>
+                <img onClick={() => window.location = `detail/ ${prd.id}`} className='h-32 object-cover  ' src={prd?.image} alt="" />
+                <div className='font-bold h-20 text-center ' > {(prd?.title).substring(0, 45)}... </div>
+                <div className='text-center opacity-70 text-sm ' > {(prd?.description).substring(0, 45)} ... </div>
+                <div className='font-bold  text-lg' > {prd?.price} TL</div>
+                <button className='bg-indigo-600 w-full p-2 rounded-lg text-white' >SEPETE EKLE</button>
             </div>
 
         </>

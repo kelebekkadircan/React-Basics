@@ -7,6 +7,8 @@ function Home() {
 
     const dispatch = useDispatch();
     const { products } = useSelector(state => state.products)
+    const { cardItems } = useSelector(state => state.cardItems)
+
 
     useEffect(() => {
         dispatch(productsAction())

@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { BsLightbulb, BsBasketFill, BsMoonStarsFill } from 'react-icons/bs'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 function Navbar() {
 
     const [color, setColor] = useState(false);
     const dispatch = useDispatch();
+
+    const { cardItems } = useSelector(state => state.card)
+
+    const menudonus = () => {
+        window.location = '/'
+    }
 
     useEffect(() => {
         const root = document.getElementById('root');
@@ -21,9 +27,9 @@ function Navbar() {
 
     return (
         <>
-            <div className='flex items-center justify-between px-3 h-28'>
-                <div className='text-2xl font-bold tracking-wider ' >
-                    LOGO
+            <div className=' flex items-center justify-between px-3 h-28'>
+                <div onClick={menudonus} className='cursor-pointer  text-2xl font-bold tracking-wider ' >
+                    KADİRCAN KELEBEK
                 </div>
                 <div className='flex items-center space-x-4' >
                     <input type="text" placeholder='search' className='border p-3 outline-none rounded-lg' />
