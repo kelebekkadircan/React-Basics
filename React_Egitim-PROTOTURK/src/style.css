@@ -1,0 +1,14 @@
+.active {
+    background-color: yellowgreen;
+}
+
+.aktif {
+    background-color: rgb(157, 32, 203);
+    padding: 0.5rem;
+    border-radius: 6px;
+    margin-right: 0.5rem;
+    border: 1px solid transparent;
+    text-align: cemter;
+    justify-content: center;
+
+}
