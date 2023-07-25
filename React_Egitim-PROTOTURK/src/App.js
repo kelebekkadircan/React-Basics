@@ -14,7 +14,7 @@
 // import Providerr from "./Context/AuthContext";
 // import Contextusage from "./Contextusage";
 // import Fetchapi from "./Fetch/Fetchapi";
-// import RouterUsing from "./RouterUsing";
+import RouterUsing from "./RouterUsing";
 // import UsingFetch from "./services/UsingFetch";
 
 
@@ -46,7 +46,7 @@ function App() {
 
 
 
-      {/* <RouterUsing /> */}
+      <RouterUsing />
       {/* <UsingFetch /> */}
       {/* <Fetchapi /> */}
       {/* <Contextusage /> */}

@@ -4,10 +4,15 @@ import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import './style.css'
+import { RouterContext } from './Context/RouterContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <App />
+    <RouterContext>
+
+      <App />
+
+    </RouterContext>
   </BrowserRouter >
 );
