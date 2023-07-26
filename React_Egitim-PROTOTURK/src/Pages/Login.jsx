@@ -21,7 +21,12 @@ function Login() {
                 username: 'Kadircan Kelebek'
             }
         )
-        navigate(location?.state?.return_url || '/')
+        navigate(location?.state?.return_url || '/', {
+            replace: true,
+            state: {
+                name: 'kadir'
+            }
+        })
     }
 
     return (
