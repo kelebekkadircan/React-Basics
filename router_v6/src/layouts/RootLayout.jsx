@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Link, NavLink, Outlet } from "react-router-dom";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 export const RootLayout = () => {
   return (
@@ -14,6 +15,7 @@ export const RootLayout = () => {
           <NavLink to="help">Help</NavLink>
           <NavLink to="careers">Careers</NavLink>
         </nav>
+        <Breadcrumbs />
       </header>
       <main>
         <Outlet />

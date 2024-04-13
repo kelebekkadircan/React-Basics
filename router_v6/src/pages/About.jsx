@@ -1,7 +1,16 @@
+import { useState } from "react";
+import { Navigate } from "react-router-dom";
+
 export const About = () => {
+  const [user, setUser] = useState("kelebek");
+
+  if (!user) {
+    return <Navigate to="/" replace={true} />;
+  }
+
   return (
     <div className="about">
-      {/* {name && <p>Hi, {name}!</p>} */}
+      {name && <p>Hi, {name}!</p>}
 
       <h2>About Us</h2>
       <p>
@@ -26,7 +35,7 @@ export const About = () => {
         quasi.
       </p>
 
-      {/* <button onClick={() => setUser(null)}>Logout</button> */}
+      <button onClick={() => setUser(null)}>Logout</button>
     </div>
   );
 };
